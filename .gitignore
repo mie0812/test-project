@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+energy_data.db
+*.db
+.venv/
