@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Energy Management Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Energy Management Dashboard</h1>
+      <span id="status">loading…</span>
+    </header>
+
+    <div class="stat-row" id="stat-row"></div>
+
+    <div class="card chart-card">
+      <div class="chart-head">
+        <h2>Power by device</h2>
+        <div class="range-buttons" id="range-buttons">
+          <button data-hours="6" class="active">6h</button>
+          <button data-hours="24">24h</button>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <svg class="chart" id="line-chart" viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="tooltip"></div>
+      </div>
+      <div class="legend" id="line-legend"></div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h2 id="energy-heading">Energy in range (kWh)</h2>
+        <div id="energy-bars"></div>
+      </div>
+      <div class="card">
+        <h2>
+          Latest readings
+          <button class="toggle-link" id="toggle-table" style="float:right">show table</button>
+        </h2>
+        <div id="table-wrap" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
